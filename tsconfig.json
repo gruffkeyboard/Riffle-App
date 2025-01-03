@@ -1,29 +1,43 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "ES2017", 
-    "module": "esnext",  
-    "jsx": "react-native", 
-    "lib": ["esnext", "dom"],
+    "target": "ES2017",
+    "module": "esnext",
+    "jsx": "react-native",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "strict": true,
-    "allowJs": true, 
-    "moduleResolution": "node", 
+    "allowJs": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
     "paths": {
-      "*": ["types/*"]
+      "*": [
+        "types/*"
+      ]
     },
-    "resolveJsonModule": true, 
-    "isolatedModules": true, 
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": true 
+    "noImplicitAny": true
   },
-  "include": ["app/**/*.ts", "app/**/*.tsx", "./"],
-  "exclude": ["./node_modules"],
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "./",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ],
   "ts-node": {
     "files": true
   },
+  "extends": "expo/tsconfig.base"
 }
